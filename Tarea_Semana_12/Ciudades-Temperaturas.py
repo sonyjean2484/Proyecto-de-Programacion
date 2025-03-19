@@ -124,7 +124,7 @@ ciudades=["QUITO","GUAYAQUIL","CUENCA"]
 for ciudad_ind, ciudad in enumerate(temperatura):
     print(f"Ciudad: {ciudades[ciudad_ind]}")
     for semana_ind , semana in enumerate(ciudad):
-        print(f"Semana {semana_ind+1}:", end=" ")
+        print(f"\tSemana {semana_ind+1}:", end=" ")
         suma = 0
         for dia in semana:
             suma += dia['temp']
