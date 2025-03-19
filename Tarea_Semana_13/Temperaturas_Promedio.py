@@ -1,17 +1,18 @@
 
 # Función que calcula el promedio de temperaturas para cada ciudad y por cada semana.
 def ciudades_temperaturas(temperatura):
-
+    promedio_temperaturas = []#lista que almacena el promedio de temperaturas por ciudad
     for ciudad in temperatura:
         suma_total = 0
         for semana in ciudad:
             suma = 0
             for dia in semana:
                 suma += dia['temp']
-            promedio = suma / len(semana)#promedio por semana
+            promedio = suma/len(semana)#promedio de tempeaturas por semana
             suma_total += promedio
-        promedio_total = suma_total / len(ciudad)# promedio por ciudad
-        return promedio_total
+        promedio_total = suma_total/len(ciudad)# promedio de temperaturas por ciudad
+        promedio_temperaturas.append(promedio_total)#agrega las temperaturas promedio por ciudad en la lista
+    return promedio_temperaturas #retorna la lista con temperaturas promedio
 
 #Creación de la matriz
 temperatura = [
@@ -131,13 +132,13 @@ temperatura = [
     ]
 ]
 #Arreglo de ciudades
-ciudades = ["QUITO", "GUAYAQUIL", "CUENCA"]
+ciudades = ["QUITO","GUAYAQUIL","CUENCA"]
 
 #llamamos a la función para calcular las temperaturas promedio
-promedio_ciudades = ciudades_temperaturas(temperatura)
+promedio_temperaturas = ciudades_temperaturas(temperatura)
 
 #Resultados en pantalla
 print("----PROMEDIO DE TEMPERTURAS----")
 for ciudad_ind, ciudad in enumerate(temperatura):
-    print(f"{ciudades[ciudad_ind]} : {promedio_ciudades:.2f} °C")
+    print(f"\t{ciudades[ciudad_ind]} : {promedio_temperaturas[ciudad_ind]:.2f} °C")
 
