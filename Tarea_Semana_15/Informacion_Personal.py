@@ -19,7 +19,7 @@ informacion_personal = {
 #Impresión del diccionario original
 impresion(informacion_personal,1)
 
-#Accediendo a la clave Ciudad dentro del diccionario y lo modifico
+#Accediendo a la clave Ciudad dentro del diccionario para modificarlo
 for clave, valor in informacion_personal.items():
     if clave == "Ciudad":
          print("Clave y valor modificado")
