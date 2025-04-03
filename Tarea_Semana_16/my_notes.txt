@@ -1,0 +1,6 @@
+Mi nombre es Sonia Vásquez
+Vivo en la ciudad de Quito
+Soy casada y tengo 3 hijos
+Estudio Tecnologías de la Información en la UEA
+Esto es una tarea de Programacion
+Creación y manejo de archivos en Python
